@@ -1,0 +1,32 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="number" id="ia">
+        <input type="number" id="ib">
+        <input type="number" id="ic">
+        <button onclick="calcular()">calcular</button>
+        <input type="number" id="ir">
+        <script>
+            var a,b,c,r;
+
+            function calcular(){
+
+            a = Number(document.getElementById('ia').value);
+            b = Number(document.getElementById('ib').value);
+            c = Number(document.getElementById('ic').value);
+
+            function calc(a,b,c) {
+                return (a+b+c)/3
+            }
+
+            r = calc(a,b,c);
+
+            document.getElementById('ir').value = r;
+
+            }
+            
+        </script>
+    </body>
+</html>

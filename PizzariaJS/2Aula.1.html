@@ -2,20 +2,24 @@
     <head>
 
     </head>
-<body style="background-color:#8cc">
-    <input type="number" id="hhh">
-    <button onclick="Calcular(Number(document.getElementById('hhh').value))">calc</button>
+<body style="background-color:#730">
+    <input type="number" id="numero">
+    <button onclick="Calcular()">calc</button>
     resultado: <input id="result">
 </body>
-
 <script>
 
-var pi = 3.14159;
+function Calcular(){
 
-//calcula a area do circulo
-function Calcular(r) {
+    var numero = Number(document.getElementById('numero').value)
+    , pi = 3.14159;
 
-document.getElementById('result').value = pi * Math.pow(r,2);
+    function CalcularAreaDoCirculo(valor, pi) {
+        return pi * Math.pow(valor,2);
+    }
+
+    //passa resultado pra tela
+    document.getElementById('result').value = CalcularAreaDoCirculo(numero, pi);;
 
 }
 </script>
