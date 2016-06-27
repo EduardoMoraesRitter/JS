@@ -1,6 +1,12 @@
 1aula - somo variaveis simples
+
 2aula - calcular area de ciculo
-2.1aula - refatração com solid 
+
+2.1aula - refatração com solid, basica
+
+2.2aula - refatração perfeita
+
 3,4,5 dever de casa
+
 6aula - calcular a media de 3 valores
 
