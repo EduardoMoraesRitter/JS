@@ -13,12 +13,30 @@ Nivel Beginner
 -- loop
 --- array
 
+sincrono assincrono
+
 --Orientação objeto
+--Orientação a eventos
+--Programacao funcional
+Closures
+Callback
+Currying
+Monads
+Memoization
+
+
 --SOLID
+single responsibility, 
+open-closed, 
+Liskov substitution, 
+interface segregation, 
+dependency inversion, 
+
 --Desiner Pather 23 pontos
 
 --Banco de Dodos local
 ---localstoreg
+---mongoDB
 
 --Angular
 --Ionic

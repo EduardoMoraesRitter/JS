@@ -6,23 +6,30 @@
         <input type="number" id="ia">
         <input type="number" id="ib">
         <input type="number" id="ic">
-        <button onclick="calcular()">calcular</button>
+        <input type="number" id="id">
+        <button onclick="Calcular()">calcular</button>
         <input type="number" id="ir">
         <script>
-            var a,b,c,r;
+            var a,b,c,d,r;
 
-            function calcular(){
+            function Calcular(){
 
+                //debugar o codigo
+                
+            
+            //pega html o valor e tranforma para numerico
             a = Number(document.getElementById('ia').value);
             b = Number(document.getElementById('ib').value);
             c = Number(document.getElementById('ic').value);
+            d = Number(document.getElementById('id').value);
 
-            function calc(a,b,c) {
-                return ((a*2)+(b*3)+(c*5))/(2+3+5)
-                //modo errado = (a+b+c*)/3;
+            function Calc(a,b,c,d) {
+                return (a * b - c * d);
             }
 
-            r = calc(a,b,c);
+            
+
+            r = Calc(a,b,c,d);
 
             document.getElementById('ir').value = r;
 

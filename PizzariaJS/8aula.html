@@ -1,0 +1,53 @@
+<!--
+    back log
+ler 3 numeros
+número de um funcionário;
+número de horas trabalhadas; = A
+QTD que ele recebeu por hora (com duas casa decimais); = B
+
+calculo do salario x = (A * B)
+
+mostrar o numero do funcionario - "NUMBER = 25"
+mostra o salario dele (com duas casa decimais) x.toFixed(2); - 550.00
+camcatenação - "SALARY = U$ 550.00"
+
+outros arredondamento, pesquisar google
+var conta = (123*1.23)+(312*3.26);
+var arredondado = parseFloat(conta.toFixed(2));
+
+console.log(conta); // 1168.409999999
+    -->
+<html>
+    <head>
+    </head>
+    <body>
+        <input type="number" id="ia">
+        <input type="number" id="ib">
+        <input type="number" id="ic">
+        <button onclick="calcular()">calcular</button>
+        <br><br>
+        <label id="num"></label>
+        <input type="text" id="ir">
+        <script>
+            var a,b,c,r;
+
+            function calcular(){
+
+            a = Number(document.getElementById('ia').value);
+            b = Number(document.getElementById('ib').value);
+            c = Number(document.getElementById('ic').value);
+
+            function calc(b,c) {
+                return b*c;
+            }
+
+            r = calc(b,c);
+
+            document.getElementById('num').text = a;
+            document.getElementById('ir').value = 'SALARIO = U$ ' + r.toFixed(2);
+
+            }
+            
+        </script>
+    </body>
+</html>
