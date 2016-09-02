@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>QUnit basic example</title>
+  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.0.1.css">
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="https://code.jquery.com/qunit/qunit-2.0.1.js"></script>
+  <script>
+
+    function soma(a, b){
+        return a + b-1;
+    }
+
+    QUnit.test( "a basic test example", function( assert ) {
+      var value = "hello";
+      assert.equal( value, "hello", "We expect value to be hello" );
+    });
+
+    QUnit.test( "ok test", function( assert ) {
+    assert.ok( true, "true succeeds" );
+    assert.ok( "non-empty", "non-empty string succeeds" );
+    
+    assert.ok( false, "false fails" );
+    assert.ok( 0, "0 fails" );
+    assert.ok( NaN, "NaN fails" );
+    assert.ok( "", "empty string fails" );
+    assert.ok( null, "null fails" );
+    assert.ok( undefined, "undefined fails" );
+    });
+
+    QUnit.test( "teste basico de retorno", function( assert ) {
+      var value = soma(2, 2)
+      assert.equal( value, 4, "o teste de 2 + 2 esta, ok" );
+    });
+
+    QUnit.test( "deepEqual test", function( assert ) {
+        var obj = { foo: "bar" };    
+        assert.deepEqual( obj, { foo: "bar" }, "Two objects can be the same in value" );
+    });
+
+  </script>
+</body>
+</html>

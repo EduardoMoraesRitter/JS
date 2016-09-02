@@ -1,0 +1,36 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text" id="nome">
+        <input type="number" id="salariofixo">
+        <input type="number" id="vendames">
+        <button onclick="getDom()">salario</button>
+        <input type="text" id="resultado">
+
+
+        <script>
+            
+            var nome, salariofixo, vendames, resultado;
+
+            function getDom(){
+                //DOM- acesso ao html
+                nome = document.getElementById("nome").value;
+                salariofixo = Number(document.getElementById("salariofixo").value);
+                vendames = Number(document.getElementById("vendames").value);
+
+                 Salario(salariofixo, vendames);
+            }            
+            
+            function Salario(salariofixo,vendames) {
+                
+                //debugger;
+                resultado = salariofixo + ((vendames*15)/100);
+                document.getElementById("resultado").value = "total = R$ " +  resultado.toFixed(2);
+                //contatenacao é juntar o texto com a var usando o +
+
+            }
+        </script>
+    </body>
+</html>
