@@ -1,0 +1,36 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <input type="text" id="nomes">
+    <input type="number" id="salariofixo">
+    <input type="number" id="vendames">
+    <button onclick="calc()">salario</button>
+    <input type="text" id="resultado">
+    <script>
+        function calc() {
+            vendedor.nome = document.getElementById("nomes").value;
+            vendedor.salariofixo = Number(document.getElementById("salariofixo").value);
+            vendedor.vendames = Number(document.getElementById("vendames").value);
+
+            vendedor.receber(vendedor.calcular(vendedor.salariofixo, vendedor.vendames));
+        }
+
+        var vendedor = {
+            "nome": "joao",
+            "salariofixo": 500.00,
+            "vendames": 1000.00,
+            calcular: function(salariofixo, vendames) {
+                return salariofixo + ((vendames * 15) / 100)
+            },
+            receber: function(r) {
+                document.getElementById("resultado").value = vendedor.nome + " Total = R$ " + r;
+            }
+        }
+    </script>
+</body>
+
+</html>
